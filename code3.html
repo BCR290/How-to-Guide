@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Ruby on Rails</title>
+	</head>
+	<!--<body>
+		<dl>
+		  <dt>Introduction</dt>
+		  <dd>What is Ruby?</dd>
+		  <dd>What is Ruby on Rails?</dd>
+		  <dt>Request/Response Cycle</dt>
+		  <dd>Static</dd>
+		  <dd>Dynamic</dd>
+		  <dt>Code</dt>
+		  <dd>(Put some stuff here)</dd>
+		</dl>
+		
+	</body> -->
+
+	<body>
+		
+		<div id="mid">
+			<h1>Making a route</h1> <!-- topic of page -->
+		
+			<fieldset>
+				<!-- info of page goes here --> 
+				<p>
+					The first thing that a app needs is a router to direct the flow of the program using the URL.
+					To create a route you need to open the <strong>config/routes.rb</strong> file. When you fisrt open it 
+					it should look like this:
+				</p>
+
+				<div class="code">
+						Rails.application.routes.draw do <br>
+						# The priority is based upon order of creation: first created -> highest priority.<br>
+				  # See how all your routes lay out with "rake routes".<br>
+<br>
+				  # You can have the root of your site routed with "root"<br>
+				  # root 'welcome#index'<br>
+<br>
+				  # Example of regular route:<br>
+				  #   get 'products/:id' => 'catalog#view'<br>
+<br>
+				  # Example of named route that can be invoked with purchase_url(id: product.id)<br>
+				  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase<br>
+<br>
+				  # Example resource route (maps HTTP verbs to controller actions automatically):<br>
+				  #   resources :products<br>
+<br>
+				  # Example resource route with options:<br>
+				  #   resources :products do<br>
+				  #     member do<br>
+				  #       get 'short'<br>
+				  #       post 'toggle'<br>
+				  #     end<br>
+				  #
+				  #     collection do<br>
+				  #       get 'sold'<br>
+				  #     end<br>
+				  #   end<br>
+<br>
+				  # Example resource route with sub-resources:<br>
+				  #   resources :products do<br>
+				  #     resources :comments, :sales<br>
+				  #     resource :seller<br>
+				  #   end<br>
+<br>
+				  # Example resource route with more complex sub-resources:<br>
+				  #   resources :products do<br>
+				  #     resources :comments<br>
+				  #     resources :sales do<br>
+				  #       get 'recent', on: :collection<br>
+				  #     end<br>
+				  #   end<br>
+
+				  # Example resource route with concerns:<br>
+				  #   concern :toggleable do<br>
+				  #     post 'toggle'<br>
+				  #   end<br>
+				  #   resources :posts, concerns: :toggleable<br>
+				  #   resources :photos, concerns: :toggleable<br>
+<br>
+				  # Example resource route within a namespace:<br>
+				  #   namespace :admin do<br>
+				  #     # Directs /admin/products/* to Admin::ProductsController<br>
+				  #     # (app/controllers/admin/products_controller.rb)<br>
+				  #     resources :products<br>
+				  #   end<br>
+				end<br>
+<br>
+				</div> 
+
+				<p>
+					This looks like a lot but its just a lot of comments. To create a route you are gonna simply put
+				</p>
+
+				<div class="code">
+						get YourURL => NameOfYourController#FunctionInController
+				</div> 
+				
+				<p>
+					Under the first line now this will make it so when the user makes a call to the rails server the router takes the request and seeing what the URL is it directs the program to a controller then from the controller to a function and that function will then go to a view. The view uses the information given in the function to display information from the Database or modify the database.
+				</p>
+
+				<p>
+					Adding this line of code to your routes.rb won't do much. We need to create a controller and then a view to go along with it.
+				</p>
+
+				<!-- no more info --> 
+			</fieldset>
+		</div> 
+
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">introduciton</a>	
+				</li>
+				<li>
+					<a href="google.com">link</a>	
+				</li>
+				<li>
+					<a href="google.com">Link</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Dynamic Website with a Model</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+
+	</body>
+</html>
