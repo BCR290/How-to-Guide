@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Ruby on Rails</title>
+	</head>
+	<!--<body>
+		<dl>
+		  <dt>Introduction</dt>
+		  <dd>What is Ruby?</dd>
+		  <dd>What is Ruby on Rails?</dd>
+		  <dt>Request/Response Cycle</dt>
+		  <dd>Static</dd>
+		  <dd>Dynamic</dd>
+		  <dt>Code</dt>
+		  <dd>(Put some stuff here)</dd>
+		</dl>
+		
+	</body> -->
+
+	<body>
+		
+		<div id="mid">
+			<h1>Making a Controller</h1> <!-- topic of page -->
+		
+			<fieldset>
+				<!-- info of page goes here --> 	
+				<p>
+					To create a controller you go into the terminal and run the script 
+			    </p>
+			    
+			    <div class="code">
+			    	$rails generate controller controllerName
+			    </div>
+			    
+			    <p>
+			    	This command will create 2 things. One, a controller in the file <strong>apps/controller/controller_name.rb</strong>. And two, a view file in <strong>apps/view/controller_name</strong>. 	
+			    </p>
+			    <p>
+			    	In the <strong>apps/controller/controller_name.rb</strong> file you will put code for the creation making the controller modify the given view. When it is first created it looks like this. 
+			    </p>
+
+			     <div class="code">
+			    	class PagesController &lt; ApplicationController<br>
+			    	<br>
+					end<br>
+			    </div>
+
+			    <p>
+			    	This is a cimple class declaration of a controller it does nothing at the moment, but if we add the code:
+			    </p>
+
+			    <div class="code">
+			    	class PagesController &lt; ApplicationController<br>
+			    		<span class="tab"></span><strong>def home</strong> <br>
+						<span class="tab"></span><strong>end</strong>	<br>
+					end<br>
+			    </div>
+
+			    <p>
+			    	This will direct the program to go to the view home. But before the program can go there we need to create the view.
+			    </p>
+
+				<!-- no more info --> 
+			</fieldset>
+		</div> 
+
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">introduciton</a>	
+				</li>
+				<li>
+					<a href="google.com">link</a>	
+				</li>
+				<li>
+					<a href="google.com">Link</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Dynamic Website with a Model</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+	</body>
+</html>
