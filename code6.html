@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Ruby on Rails</title>
+	</head>
+	<!--<body>
+		<dl>
+		  <dt>Introduction</dt>
+		  <dd>What is Ruby?</dd>
+		  <dd>What is Ruby on Rails?</dd>
+		  <dt>Request/Response Cycle</dt>
+		  <dd>Static</dd>
+		  <dd>Dynamic</dd>
+		  <dt>Code</dt>
+		  <dd>(Put some stuff here)</dd>
+		</dl>
+		
+	</body> -->
+
+	<body>
+		
+		<div id="mid">
+			<h1>Making a Model</h1> <!-- topic of page -->
+		
+			<fieldset>
+				<!-- info of page goes here --> 	
+				<p>
+					Now we have made a very simple website using rails, but it doesn't do much. We need to add a model to interact with the databases so we can have a more dynamic website. I will be making a very simple messanger app. The messages will be saved on a database and the user will be able to send messages to the serve as well as see the other messages that have been sent.
+				</p>
+
+				<p>
+					So first things first.
+				</p>
+
+				<div class="code">
+					$ rails new Messenger <br>
+					$ cd Messenger <br>
+					$ bundle install <br>
+				</div>
+
+				<p>
+					Now that we have created the app, gone into the file, and installed all the necessary files, we have the app. Now we want this app to communicate with one of our servers so that means we need a model.
+				</p>
+
+				<p>
+					To generate a model you run the command:
+				</p>
+
+				<div class="code">
+					$ rails generate model Message
+				</div>
+
+				<p>
+					This command creates two things. 
+					<ol>
+						<li>Creates a file <strong>app/models/message.rb</strong>. This is the model representation of the a table of a database. It is really just a class declaration.</li>
+						<li>And a migration file in  <strong>db/migrate/&lt;TIMESTAMPED_file_name&gt;</strong>This will be used to update the database.</li>
+					</ol>
+				</p>
+				<br>
+				<strong>app/models/message.rb</strong>
+				<div class="code">
+					class Message < ActiveRecord::Base <br>
+					end
+				</div>
+				<br>
+				<strong>db/migrate/&lt;TIMESTAMPED_file_name&gt;</strong>
+				<div class="code">
+					class CreateMessages < ActiveRecord::Migration <br>
+					<span class="tab"></span>  def change <br>
+					    <span class="tab"></span><span class="tab"></span>create_table :messages do |t| <br>
+					      <span class="tab"></span><span class="tab"></span><span class="tab"></span>t.timestamps null: false <br>
+					    <span class="tab"></span><span class="tab"></span>end <br>
+					  <span class="tab"></span>end <br>
+					end
+				</div>
+
+				<!-- no more info --> 
+			</fieldset>
+		</div> 
+
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">Introduciton</a>	
+				</li>
+				<li>
+					<a href="">Ruby on Rails</a>
+				</li>
+				<li>
+					<a href="">MCV Static</a>	
+				</li>
+				<li>
+					<a href="">MCV Dynamic</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Dynamic Website (Models)</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+	</body>
+</html>
