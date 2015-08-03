@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Rails app With Static Pages</title>
+	</head>
+
+	<body>
+		
+		<div id="mid">
+			<h1>Rails app With Static Pages</h1> <!-- topic of page -->
+			
+			<fieldset>
+				<!-- info of page goes here --> 
+				<h1>Background</h1>
+				<p>In the first turn of the request/response cycle, the page with the form is displayed to the user.</p>
+				<img src= "static.png"/>
+				<h1>Steps</h1>
+				<p>1. A user opens his browser, types in a URL, and presses Enter. </p>
+				<p>2. When the user presses Enter, the browser sends a GET request for that URL. </p>
+				<p>3. The GET request hits the Rails router (config/routes.rb). The router maps the URL to the correct controller action to handle the request.</p>
+				<p>4. The action receives the GET request and passes it on to the view. </p>
+				<p>5. HThe view renders the page as HTML. </p>
+				<p>6. The controller sends the HTML back to the browser. The page loads and the user sees the page with the form.</p>
+         
+              
+							
+				<!-- no more info --> 
+			</fieldset>
+
+		</div> 
+
+		
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">Home</a>	
+				</li>
+				<li>
+					<a href="ruby.html">What's Ruby?</a>
+				</li>
+				<li>
+					<a href="rails.html">What's Ruby on Rails?</a>
+				</li>
+				<li>
+					<a href="static.html">MCV Static</a>	
+				</li>
+				<li>
+					<a href="dynamic.html">MCV Dynamic</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Dynamic Website with a Model</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+	</body>
+</html>
