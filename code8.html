@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Ruby on Rails</title>
+	</head>
+
+	<body>
+		
+		<div id="mid">
+			<h1>Connecting a Controller and a Model</h1> <!-- topic of page -->
+		
+			<fieldset>
+				<!-- info of page goes here -->
+				<p>
+					So far we have taken data from the database using index, but there are 7 standard rail actions that are used to modify tables with the controller.
+				</p>
+
+				<img src="Screen Shot 2015-08-02 at 9.07.31 AM.png" style="width:500px; margin-left:35px;">
+
+				<p>
+					You can use these to do most any database application you can think of. 
+				</p>
+
+				<p>
+					For now though we are going to use the <strong>new</strong> and <strong>create</strong>. So in the controller we are going to put some new code. Underneadth the code that should be there from the last page.
+				</p>
+
+				<div class="code">
+					def new <br>
+					<span class="tab"></span>@message = Message.new<br>
+					end<br>
+					<br>
+					def create <br>
+					<span class="tab"></span>@message = Message.new(message_params)<br>
+					<span class="tab"></span>if @message.save<br>
+					<span class="tab"></span><span class="tab"></span>redirect_to '/messages'<br>
+					<span class="tab"></span>else<br>
+					<span class="tab"></span><span class="tab"></span>render 'new'<br>
+					<span class="tab"></span>end<br>
+					end<br>
+					<br>
+					private<br>
+					<span class="tab"></span>def message_params<br>
+					<span class="tab"></span><span class="tab"></span>params.require(:message).permit(:content)<br>
+					<span class="tab"></span>end<br>
+					end
+				</div>
+
+				<!-- no more info --> 
+			</fieldset>
+		</div> 
+
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">Introduciton</a>	
+				</li>
+				<li>
+					<a href="">Ruby on Rails</a>
+				</li>
+				<li>
+					<a href="">MCV Static</a>	
+				</li>
+				<li>
+					<a href="">MCV Dynamic</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Model</a>
+				</li>
+				<li>
+					<a href="code7.html">Contecting a Controller and a Model</a>
+				</li>
+				<li>
+					<a href="code8.html">Taking Input From a View</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+	</body>
+</html>
