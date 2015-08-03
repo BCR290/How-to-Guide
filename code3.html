@@ -34,17 +34,17 @@
 
 				<div class="code">
 						Rails.application.routes.draw do <br>
-						# The priority is based upon order of creation: first created -> highest priority.<br>
+						# The priority is based upon order of creation: first created -&gt; highest priority.<br>
 				  # See how all your routes lay out with "rake routes".<br>
 <br>
 				  # You can have the root of your site routed with "root"<br>
 				  # root 'welcome#index'<br>
 <br>
 				  # Example of regular route:<br>
-				  #   get 'products/:id' => 'catalog#view'<br>
+				  #   get 'products/:id' =&gt; 'catalog#view'<br>
 <br>
 				  # Example of named route that can be invoked with purchase_url(id: product.id)<br>
-				  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase<br>
+				  #   get 'products/:id/purchase' =&gt; 'catalog#purchase', as: :purchase<br>
 <br>
 				  # Example resource route (maps HTTP verbs to controller actions automatically):<br>
 				  #   resources :products<br>
@@ -88,8 +88,7 @@
 				  #     # (app/controllers/admin/products_controller.rb)<br>
 				  #     resources :products<br>
 				  #   end<br>
-				end<br>
-<br>
+				end
 				</div> 
 
 				<p>
@@ -105,6 +104,10 @@
 				</p>
 
 				<p>
+					We used the GET request code in this particular route. But there are times when you will want to replace that 'get' with 'post' or sometimes (once per route file, if any) you will add a 'root'. The 'get' request tells the router to look at the end of the URL for the route, the 'post' tells the program to look for the POST request for the route. The Root is different. You can only add the root route to your router once, beacause it becomes the "home page" of your server. So  if you set up a root that means if you were to go to the localhost:3000 (or whatever your port maybe) then you would be routed to that 'root' controller/page.
+				</p>
+
+				<p>
 					Adding this line of code to your routes.rb won't do much. We need to create a controller and then a view to go along with it.
 				</p>
 
@@ -116,13 +119,16 @@
 		<div id="sidebar">
 			<ol>
 				<li>
-					<a href="page.html">introduciton</a>	
+					<a href="page.html">Introduciton</a>	
 				</li>
 				<li>
-					<a href="google.com">link</a>	
+					<a href="">Ruby on Rails</a>
 				</li>
 				<li>
-					<a href="google.com">Link</a>
+					<a href="">MCV Static</a>	
+				</li>
+				<li>
+					<a href="">MCV Dynamic</a>
 				</li>
 				<li>
 					<a href="code1.html">Installment</a>
@@ -143,11 +149,11 @@
 					<a href="code5.html">Creating a View</a>
 				</li>
 				<li>
-					<a href="code6.html">Creating a Dynamic Website with a Model</a>
+					<a href="code6.html">Creating a Dynamic Website (Models)</a>
 				</li>
 			</ol>
 		</div>
-		<!-- This is the end of the links --> 
+		<!-- This is the end of the links -->  
 
 	</body>
 </html>
