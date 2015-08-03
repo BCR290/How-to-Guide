@@ -71,11 +71,54 @@
 					class CreateMessages < ActiveRecord::Migration <br>
 					<span class="tab"></span>  def change <br>
 					    <span class="tab"></span><span class="tab"></span>create_table :messages do |t| <br>
-					      <span class="tab"></span><span class="tab"></span><span class="tab"></span>t.timestamps null: false <br>
+					      <br>
 					    <span class="tab"></span><span class="tab"></span>end <br>
 					  <span class="tab"></span>end <br>
 					end
 				</div>
+
+				<p>
+					This is the migrant file we can write code in this to modify the database we created.
+					In this file write:
+				</p>
+				<div class="code">
+					class CreateMessages &lt; ActiveRecord::Migration <br>
+					<span class="tab"></span> def change<br>
+					<span class="tab"></span> <span class="tab"></span> create_table :messages do |t|<br>
+					<span class="tab"></span> <span class="tab"></span> <span class="tab"></span><strong>t.text :content</strong><br>
+					<span class="tab"></span> <span class="tab"></span> <span class="tab"></span> <strong>t.timestamps null: false</strong><br>
+					<span class="tab"></span> <span class="tab"></span> end <br>
+					<span class="tab"></span> end <br>
+					end
+				</div>
+
+				<p>
+					The create_table function is a way of creating a new table in the database for storing messages. In that method we added the t.text :content. This will create a text column in the Database called content. We also added the t.timestamp null:false. This is a Rails command that meand the databases messages will have a timestamp, it is defult set to null:true. By setting null:false it will easily save a time stamp for each message. It does this by creating Two new columns in the table; the created_at column saving the time that the message was created and the updated_at column saving the time that the message row was updated.
+				</p>
+
+				<p>
+					Now that we have a database model we need to set up the database to accept this model, we do that with a simple command:
+				</p>
+				<div class="code">
+					$ rake db:migrate
+				</div>
+
+				<p>
+				 	Now if you were using a previously used database and have some data that you want to input to your new database you would put that info in the <strong>db/seed.rb</strong> file and use the command:
+				</p>
+
+				<div class="code">
+					$ rake db:seed
+				</div>
+
+				<p>
+					This will take the information from the seed database and import it into your database
+				</p>
+
+				<p>
+					Well now you know the basics of creating and paring a database with a model. Now we need to attach a controller, view and a route to this database so we can actually see the database's information.
+				</p>
+
 
 				<!-- no more info --> 
 			</fieldset>
