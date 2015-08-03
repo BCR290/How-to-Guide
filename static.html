@@ -3,39 +3,35 @@
 
 	<head>
 		<link href="page.css" rel="stylesheet" type="text/css" />
-		<title>Ruby on Rails</title>
+		<title>Rails app With Static Pages</title>
 	</head>
 
 	<body>
 		
 		<div id="mid">
-			<h1>Creating a Local Developement Server</h1> <!-- topic of page -->
-		
+			<h1>Rails app With Static Pages</h1> <!-- topic of page -->
+			
 			<fieldset>
-				<!-- info of page goes here --> 	
-				<p>
-					Once you have Ruby and Rails installed you need to have a server that has Rails to run the program. But most people don't have access to a server. So Rails has a way that you can Create a local server that uses files that you already have downloaded to make it so you can run your application without a connection to a server or the internet.
-				</p>
-
-				<p>
-					Run the command: 
-				</p>
-				
-				<div class="code">
-					$rails server
-				</div>
-
-				<p>
-					This will start the a local server and it should tell you the port number. In your browser put <strong>http://localhost:</strong> and then the port that they gave you. For example my computer gives me the port number of 3000, so I would go to http://localhost:3000. When you visit your local host server it should show you a ruby on rails "site" with some documentation, and other healpful things. I would suggest using this as you go along as well. 
-				</p>
-
-
-
-
+				<!-- info of page goes here --> 
+				<h1>Background</h1>
+				<p>In the first turn of the request/response cycle, the page with the form is displayed to the user.</p>
+				<img src= "static.png"/>
+				<h1>Steps</h1>
+				<p>1. A user opens his browser, types in a URL, and presses Enter. </p>
+				<p>2. When the user presses Enter, the browser sends a GET request for that URL. </p>
+				<p>3. The GET request hits the Rails router (config/routes.rb). The router maps the URL to the correct controller action to handle the request.</p>
+				<p>4. The action receives the GET request and passes it on to the view. </p>
+				<p>5. HThe view renders the page as HTML. </p>
+				<p>6. The controller sends the HTML back to the browser. The page loads and the user sees the page with the form.</p>
+         
+              
+							
 				<!-- no more info --> 
 			</fieldset>
+
 		</div> 
 
+		
 		<!-- should be the smae on every page --> 
 		<div id="sidebar">
 			<ol>
