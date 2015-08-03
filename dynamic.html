@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Dynamic Rails App</title>
+	</head>
+
+	<body>
+		
+		<div id="mid">
+			<h1>Dynamic Rails App</h1> <!-- topic of page -->
+			
+			<fieldset>
+				
+				<!-- info of page goes here --> 
+				<h1>Background</h1>
+				<p>When a user submits a form, it triggers the second turn of the request/response cycle, where the submitted data is saved into the database.</p>
+				<img src= "dynamic.png"/>
+				<h1>Steps</h1>
+				<p>1. The user fills in the form and submits the form. </p>
+				<p>2. When the user submits the form, the browser sends a POST request to the Rails app. </p>
+				<p>3. The POST request hits the Rails router. The router maps the POST request to the correct controller action.</p>
+				<p>4. The action receives a POST request. The action retrieves the submitted data from the form, and uses the model to store the data into the database. </p>
+				<p>5. The model completes its task. </p>
+				<p>6. The controller action passes the request on to the view.</p>
+				<p>7. The view renders the page as HTML. </p>
+				<p>8. The controller sends the HTML back to the browser. The page loads and the user sees it. </p>
+
+         
+              
+							
+				<!-- no more info --> 
+			</fieldset>
+
+		</div> 
+
+		
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">Home</a>	
+				</li>
+				<li>
+					<a href="ruby.html">What's Ruby?</a>
+				</li>
+				<li>
+					<a href="rails.html">What's Ruby on Rails?</a>
+				</li>
+				<li>
+					<a href="static.html">MCV Static</a>	
+				</li>
+				<li>
+					<a href="dynamic.html">MCV Dynamic</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Dynamic Website with a Model</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+	</body>
+</html>
