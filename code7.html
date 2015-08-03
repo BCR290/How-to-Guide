@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="page.css" rel="stylesheet" type="text/css" />
+		<title>Ruby on Rails</title>
+	</head>
+	<!--<body>
+		<dl>
+		  <dt>Introduction</dt>
+		  <dd>What is Ruby?</dd>
+		  <dd>What is Ruby on Rails?</dd>
+		  <dt>Request/Response Cycle</dt>
+		  <dd>Static</dd>
+		  <dd>Dynamic</dd>
+		  <dt>Code</dt>
+		  <dd>(Put some stuff here)</dd>
+		</dl>
+		
+	</body> -->
+
+	<body>
+		
+		<div id="mid">
+			<h1>Connecting a Controller and a Model</h1> <!-- topic of page -->
+		
+			<fieldset>
+				<!-- info of page goes here --> 	
+				<p>
+					Now that we have a database we want a controller that can give the view some of the information from the database so that the user can see it. 
+				</p>
+
+				<p>
+					First things first:
+				</p>
+
+				<div class="code">
+					$ rails generate controller Messages
+				<div>
+
+				<p>
+					This will be a controller to see a list of all the messages in the databases. We will want to look at the <strong>index</strong> of the messages. In the routes file you should add the code:
+				</p>
+
+				<div class="code">
+					get messages = messages#index;	
+				</div>
+
+				<p>
+					So this route sends you to the messages controller, but right now our messages controller doesn't do anything. We need to add an index function.
+				</p>
+
+				<div class="code">
+					def index <br>
+					<span class="tab"></span>@messages = Message.all <br>
+					end
+				</div>
+
+				<p>
+					This is the new important part. You see that <strong>@messages</strong> is all the messages that are in the Message rows in the database, and now our controller is sending that message to the index view. But right now we don't have an index view. 
+				</p>
+
+				<p>
+					Using the variables in a view that is passed by a controller you need to use special tags in your html.
+					The <strong>&lt;%</strong> and <strong>%&gt;</strong> tags allow you to input ruby code right into your HTML code.
+				</p>
+				<div class="code">
+					&lt;div class="container"&gt;
+					&lt;% @messages.each do |message| %&gt; 
+					<span class="tab">&lt;div class="message"> 
+					<span class="tab"><span class="tab">&lt;p class="content"&gt;&lt;%= message.content %&gt;&lt;/p&gt;
+					<span class="tab"><span class="tab">&lt;p class="time"&gt;&lt;%= message.created_at %&gt;&lt;/p&gt; 
+					<span class="tab">&lt;/div&gt;
+					&lt;% end %&gt;
+					&lt;%= link_to 'New Message', "messages/new" %&gt;
+					&lt;/div&gt;
+				</div>
+
+				<p>
+					Now you can see that this code would grab the @messages array and then do a loop over all the elements and print out the content and the created_at columns of the table for each message. But right now you probably don't have anything in your database so there are no messages to output.
+				</p>
+
+				<p>
+					So we should create a way to input data into the database.
+				</p>
+				<!-- no more info --> 
+			</fieldset>
+		</div> 
+
+		<!-- should be the smae on every page --> 
+		<div id="sidebar">
+			<ol>
+				<li>
+					<a href="page.html">Introduciton</a>	
+				</li>
+				<li>
+					<a href="">Ruby on Rails</a>
+				</li>
+				<li>
+					<a href="">MCV Static</a>	
+				</li>
+				<li>
+					<a href="">MCV Dynamic</a>
+				</li>
+				<li>
+					<a href="code1.html">Installment</a>
+				</li>
+				<li>
+					<a href="code0.html">A Development Server</a>
+				</li>
+				<li>
+					<a href="code2.html">MVC and R Location</a>
+				</li>
+				<li>
+					<a href="code3.html">Creating a Router</a>
+				</li>
+				<li>
+					<a href="code4.html">Creating a Controller</a>
+				</li>
+				<li>
+					<a href="code5.html">Creating a View</a>
+				</li>
+				<li>
+					<a href="code6.html">Creating a Model</a>
+				</li>
+				<li>
+					<a href="code7.html">Contecting a Controller and a Model</a>
+				</li>
+				<li>
+					<a href="code8.html">Taking Input From a View</a>
+				</li>
+			</ol>
+		</div>
+		<!-- This is the end of the links --> 
+	</body>
+</html>
